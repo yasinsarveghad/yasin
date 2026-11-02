@@ -1,0 +1,42 @@
+name: Import complete portfolio
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/import-portfolio.yml
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and extract portfolio
+        shell: python
+        run: |
+          import hashlib, io, json, pathlib, zipfile
+          root = pathlib.Path.cwd()
+          parts = [root / f'portfolio-upload.part-{i:02}' for i in range(8)]
+          data = b''.join(p.read_bytes() for p in parts)
+          expected = 'd33a45d71c3fae8211b0d5e201f6826a9e11c479ac5083be2e3942f2e500e2c9'
+          assert hashlib.sha256(data).hexdigest() == expected, 'Transfer checksum mismatch'
+          with zipfile.ZipFile(io.BytesIO(data)) as archive:
+              for name in archive.namelist():
+                  path = pathlib.PurePosixPath(name)
+                  assert not path.is_absolute() and '..' not in path.parts and '.git' not in path.parts
+              archive.extractall(root)
+          manifest = json.loads((root / 'FILE-MANIFEST.json').read_text())
+          for name, digest in manifest.items():
+              assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest, name
+          assert (root / 'concept-02/home.html').is_file()
+          assert (root / 'design-system/cloud-companions').is_dir()
+          for part in parts:
+              part.unlink()
+          print(f'Verified {len(manifest)} portfolio files')
+      - name: Commit verified site
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          git commit -m 'Import complete Yasin portfolio, assets and animations'
+          git push
