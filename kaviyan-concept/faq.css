@@ -1,0 +1,14 @@
+#faq [data-framer-name="Accordion"].has-concept-faq>:not(.concept-faq){display:none!important}
+.concept-faq{width:100%;text-align:start}
+.concept-faq-item{border-bottom:1px solid #e3e3e8;padding:4px 0}
+.concept-faq-item h3{margin:0}
+.concept-faq-item button{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:72px;padding:20px 8px;border:0;background:transparent;color:#252528;font-family:inherit;font-weight:500;font-size:18px;line-height:1.5;text-align:start;cursor:pointer}
+.concept-faq-item svg{width:20px;height:20px;flex:none;fill:none;stroke:#74747c;stroke-width:1.6;stroke-linecap:round;transition:transform .22s ease}
+.concept-faq-item button[aria-expanded=true] svg{transform:rotate(45deg)}
+.concept-faq-body{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .24s ease,opacity .2s ease}
+.concept-faq-body[aria-hidden=false]{grid-template-rows:1fr;opacity:1}
+.concept-faq-body>div{min-height:0;overflow:hidden}
+.concept-faq-body p{font-family:inherit;font-weight:400;font-size:15px;line-height:1.8;color:#74747c;margin:0;padding:0 8px 24px}
+.concept-faq-item button:focus-visible{outline:2px solid #93939d;outline-offset:-3px;border-radius:16px}
+@media(max-width:599px){.concept-faq-item button{font-size:16px;gap:16px}.concept-faq-body p{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.concept-faq-body,.concept-faq-item svg{transition:none}}

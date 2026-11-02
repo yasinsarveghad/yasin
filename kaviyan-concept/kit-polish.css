@@ -1,0 +1,118 @@
+/* Portfolio kit: final portrait geometry and restrained component tokens. */
+.te-hero{container-type:size}
+@media(min-width:1100px){
+.te-scene[data-scene=portraits] .te-person-right{width:min(52vw,calc(117.4cqh - 54px));top:auto;bottom:-24px;right:-4%;left:auto}
+.te-scene[data-scene=portraits] .te-person-left{width:min(50vw,calc(112cqh - 52px));left:-14%;top:calc(100% + 8px - min(44.304vw,calc(100cqh - 46px)));bottom:auto}
+}
+@media(max-width:1099px){.te-hero{height:clamp(720px,calc(100svh - 94px),850px);min-height:720px}.te-scene[data-scene=portraits] .te-person-right{width:min(480px,110vw);top:235px;left:50%;right:auto;bottom:auto;transform:translateX(-62%)}html[lang=fa] .te-scene[data-scene=portraits] .te-person-right{top:255px}}
+@media(max-height:760px) and (max-width:1099px){.te-copy{top:50px}.te-scene[data-scene=portraits] .te-person-right{top:210px}html[lang=fa] .te-scene[data-scene=portraits] .te-person-right{top:240px}}
+@media(min-width:600px) and (max-width:1099px){.te-copy h1 br{display:none}.te-copy h1{white-space:nowrap;font-size:26px!important}.te-scene[data-scene=portraits] .te-person-right{top:255px}html[lang=fa] .te-copy h1{white-space:normal;font-size:25px!important}html[lang=fa] .te-scene[data-scene=portraits] .te-person-right{top:320px}}
+@media(max-width:599px){.te-scene[data-scene=portraits] .te-person-right{width:115vw;top:250px}html[lang=fa] .te-scene[data-scene=portraits] .te-person-right{top:260px}}
+/* Remove the three requested sections from the rendered concept. */
+#main section[data-framer-name="Numbers"],#main section[data-framer-name="Platform"],#main #pricing{display:none!important}
+/* Portfolio palette: explicit surfaces, no gradient fragments. */
+#main,#main *{--token-b5a76fdb-d4ae-4244-a642-97bc65777a7f:#93939d!important;--token-0d2b014a-5e4e-481c-84c5-9a61a0d98307:#74747c!important}
+#main [data-ui-surface=light]{background-color:#e5e5ea!important;background-image:none!important}
+#main [data-ui-surface=dark]{background-color:#74747c!important;background-image:none!important}
+#main [data-ui-ink]{color:#74747c!important;--framer-text-color:#74747c!important;--21h8s6:#74747c!important}
+#main [data-framer-name="Status Layer"]{background:#e5e5ea!important;color:#252528!important}
+#main section[data-framer-name="CTA"] [data-framer-name="Panel"]{background:#e5e5ea!important;background-image:none!important;border-radius:40px!important;overflow:hidden!important}
+#main section[data-framer-name="CTA"] [data-framer-name="Glow"]{display:none!important}
+#main section[data-framer-name="CTA"] :is(h2,p){--framer-text-color:#252528!important;color:#252528!important}
+/* Keep a single, stable label in each round button. */
+#main a.framer-COTOK,#main button[type=submit]{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;height:44px!important;min-height:44px!important;padding:0 20px!important;border-radius:999px!important;corner-shape:round!important;box-sizing:border-box!important;box-shadow:none!important;isolation:isolate}
+#main a.framer-COTOK{background:#252528!important;color:#fff!important;border:1px solid transparent!important}
+#main a.framer-COTOK[data-framer-name="Secondary"]{background:#fff!important;color:#252528!important;border-color:#e3e3e8!important}
+#main a.framer-COTOK :is([data-framer-name="Face"],[data-framer-name="Glow Ring"],[data-framer-name="Label Hover"]){display:none!important}
+#main a.framer-COTOK [data-framer-name="Roll"]{transform:none!important;translate:none!important;display:flex!important;align-items:center!important;height:auto!important;overflow:visible!important}
+#main a.framer-COTOK [data-framer-name="Label Wrap"]{height:auto!important;overflow:visible!important;flex:none!important}
+#main a.framer-COTOK [data-framer-name="Label"]{height:auto!important}
+#main a.framer-COTOK p,#main button[type=submit] p{font-size:12px!important;line-height:1.5!important;white-space:nowrap!important;color:inherit!important;--framer-text-color:inherit!important}
+#main a.framer-COTOK :is([data-framer-name="Label"],[data-framer-name="Label Wrap"],[data-framer-name="Roll"]){color:inherit!important;--extracted-r6o4lv:currentColor!important;--framer-text-color:currentColor!important}
+#main a.framer-COTOK svg{width:16px!important;height:16px!important;--21h8s6:currentColor!important;color:inherit!important;flex-shrink:0!important}
+#main section[data-framer-name="CTA"] a.framer-COTOK p{color:inherit!important;--framer-text-color:currentColor!important}
+#main [data-framer-name="Remix Pill"],#main [data-framer-name="Album Tab"] [tabindex],.concept-prompt b,#gallery .concept-gallery-selected{border-radius:999px!important}
+/* Icons sit directly on the canvas, without black tiles or their borders. */
+#main [data-framer-name="Headline Chip"]{background:transparent!important;background-image:none!important;box-shadow:none!important;border:0!important;--border-bottom-width:0px!important;--border-top-width:0px!important;--border-left-width:0px!important;--border-right-width:0px!important;border-radius:0!important;corner-shape:round!important}
+#main [data-framer-name="Headline Chip"]:after{display:none!important}
+#main [data-framer-name="Headline Chip"] svg{color:#74747c!important;--21h8s6:#74747c!important;width:24px!important;height:24px!important}
+#main .concept-mode-art.code{background:#19191c}.concept-mode-art pre{color:#c7c7ce}
+@media(hover:hover){#main a.framer-COTOK:hover{opacity:.85!important}}
+@media(prefers-reduced-motion:reduce){#main a.framer-COTOK{transition:none!important}}
+#main [data-framer-name="Icon Box"]{background:transparent!important;background-image:none!important;box-shadow:none!important;border:0!important;border-radius:0!important;--border-bottom-width:0px!important;--border-top-width:0px!important;--border-left-width:0px!important;--border-right-width:0px!important}
+#main [data-framer-name="Icon Box"]:after{display:none!important}
+#main [data-framer-name="Icon Box"] svg{color:#74747c!important;--21h8s6:#74747c!important;width:24px!important;height:24px!important}
+#main footer a[href="./pricing"],#main nav a[href="./pricing"]{display:none!important}
+/* A measured arc keeps the final gallery complete at every breakpoint. */
+#main section[data-framer-name="CTA"] [data-framer-name="Panel"]{display:flex!important;flex-direction:column!important;align-items:center!important;gap:36px!important;height:auto!important;min-height:0!important;padding:80px 0 64px!important}
+#main section[data-framer-name="CTA"] [data-framer-name="Content"]{position:relative!important;inset:auto!important;width:calc(100% - 64px)!important;max-width:1000px!important;order:1}
+#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]{position:relative!important;inset:auto!important;width:100%!important;height:280px!important;flex:none!important;order:2;overflow:hidden!important;direction:ltr}
+#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]>:not(.kit-arc){display:none!important}
+#main section[data-framer-name="CTA"] [data-framer-name="Bottom"]{position:relative!important;inset:auto!important;order:3;width:calc(100% - 48px)!important;max-width:620px!important;height:auto!important;gap:24px!important}
+.kit-arc{position:absolute;inset:0;perspective:1000px;pointer-events:none}
+.kit-arc-frame{position:absolute;top:0;left:50%;width:calc(88px + var(--depth)*14px);height:calc(118px + var(--depth)*20px);border-radius:14px;overflow:hidden;transform:translateX(calc(var(--offset)*104px - 50%)) translateY(calc(92px - var(--depth)*13px)) rotateY(calc(var(--offset)*-7deg));backface-visibility:hidden;box-shadow:0 8px 22px -15px #25252830}
+.kit-arc-frame img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:599px){#main section[data-framer-name="CTA"] [data-framer-name="Panel"]{padding:48px 0!important;gap:24px!important;border-radius:32px!important}#main section[data-framer-name="CTA"] [data-framer-name="Content"]{width:calc(100% - 40px)!important}#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]{height:210px!important}.kit-arc-frame{width:calc(68px + var(--depth)*8px);height:calc(96px + var(--depth)*13px);border-radius:10px;transform:translateX(calc(var(--offset)*73px - 50%)) translateY(calc(64px - var(--depth)*9px)) rotateY(calc(var(--offset)*-7deg))}}
+#product [data-framer-name^="Card"],.concept-mode-art{background-color:#f1f1f4!important;background-image:none!important}
+/* Decorative gradients remain transparent instead of becoming opaque tiles. */
+#main [data-ui-glow]{background-color:transparent!important;background-image:radial-gradient(ellipse at center,rgba(147,147,157,.12),rgba(147,147,157,0) 70%)!important}
+#connected [data-framer-name="Glow Left"],#connected [data-framer-name="Glow Right"]{display:none!important;background:none!important}
+/* Responsive finishing pass: scale the closing composition from its own canvas. */
+#main section[data-framer-name="CTA"] [data-framer-name="Panel"]{container-type:inline-size;gap:32px!important;padding:clamp(40px,6vw,80px) 0!important}
+#main section[data-framer-name="CTA"] h2{font-size:clamp(36px,5.3vw,80px)!important;line-height:1.12!important;text-wrap:balance}
+html[lang=fa] #main section[data-framer-name="CTA"] h2[data-fa-overlay]:after{font-size:clamp(32px,4.6vw,68px)!important;line-height:1.6!important;text-wrap:balance}
+#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]{height:clamp(190px,23cqw,330px)!important}
+.kit-arc{perspective:1400px}
+.kit-arc-frame{width:clamp(66px,9cqw,150px);height:clamp(106px,14cqw,235px);top:50%;left:50%;transform:translate(-50%,-50%) translateX(calc(var(--offset)*7.8cqw)) translateY(calc((7 - var(--depth))*.35cqw)) rotateY(calc(var(--offset)*-6deg));border-radius:clamp(10px,1cqw,18px);z-index:calc(20 - var(--depth));box-shadow:0 12px 24px -16px #25252840}
+#main section[data-framer-name="CTA"] [data-framer-name="Bottom"]{flex-wrap:wrap!important;min-width:0!important}
+#main section[data-framer-name="CTA"] [data-framer-name="Bottom"] p{max-width:100%;text-wrap:balance}
+#main [data-framer-name="Track Build"] [data-framer-name="Clip"]{background:#007aff!important;background-image:none!important;color:#fff!important}
+#main [data-framer-name="Track Build"] [data-framer-name="Clip"] p{color:#fff!important;--framer-text-color:#fff!important;--locale-color:#fff!important}
+html[lang=fa] #main [data-framer-name="Track Build"] [data-fa-overlay]:after{color:#fff!important}
+#main #services [data-framer-name="Row"]{min-width:0!important}
+#main #services [data-framer-name="Facts"]{min-width:0!important}
+@media(max-width:599px){#main section[data-framer-name="CTA"] [data-framer-name="Panel"]{gap:24px!important}.kit-arc-frame{width:clamp(60px,16cqw,90px);height:clamp(96px,25cqw,142px);transform:translate(-50%,-50%) translateX(calc(var(--offset)*14cqw)) translateY(calc((7 - var(--depth))*2cqw)) rotateY(calc(var(--offset)*-6deg))}#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]{height:220px!important}}
+#main [data-framer-name="Service Tile"] [data-framer-name="Tint"]{background:#f1f1f4!important}
+#main [data-framer-name="Service Tile"] [data-framer-name="Tail"],#main [data-framer-name="Service Tile"]:hover [data-framer-name="Tail"]{background:#ededf0!important;background-image:none!important;color:#63636c!important;transition:background-color .2s ease!important}
+#main [data-framer-name="Service Tile"] [data-framer-name="Tail"] svg{color:#63636c!important;--21h8s6:#63636c!important}
+
+/* Restore the authored animated arc; keep the responsive text layout. */
+#main section[data-framer-name="CTA"] [data-framer-name="Panel"]{background:radial-gradient(ellipse at 50% 58%,#fff 0%,#ededf3 46%,#e5e5ea 100%)!important;isolation:isolate}
+#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]{height:clamp(300px,35vw,500px)!important;overflow:visible!important}
+#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]>:not(.kit-arc){display:block!important;width:100%!important;height:100%!important}
+#main section[data-framer-name="CTA"] .kit-arc{display:none!important}
+#main [data-framer-name="Album Tab"] [tabindex]{height:auto!important;min-height:42px!important;min-width:max-content!important;padding:10px 16px!important;flex-shrink:0!important;overflow:visible!important}
+#main [data-framer-name="Album Tab"] [tabindex] p{white-space:nowrap!important;line-height:1.5!important}
+html[lang=fa] #main [data-framer-name="Album Tab"] [data-fa-overlay]:after{white-space:nowrap!important;font-size:13px!important;line-height:1.7!important}
+#main [data-framer-name="Album Tab"]{max-width:100%!important;height:auto!important;min-height:54px!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important;scrollbar-width:none;padding:6px!important;box-sizing:border-box!important}
+#main [data-framer-name="Album Tab"]::-webkit-scrollbar{display:none}
+#main [data-framer-name="Floating Frames"] [data-framer-name="Label"]{max-width:90%!important;width:max-content!important;height:auto!important;white-space:normal!important}
+html[lang=fa] #main [data-framer-name="Floating Frames"] [data-fa-overlay]:after{font-size:12px!important;line-height:1.7!important}
+@media(max-width:599px){#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]{height:300px!important}}
+#main section[data-framer-name="CTA"] [data-framer-name="Arc Zone"]>:not(.kit-arc){display:none!important}
+#main section[data-framer-name="CTA"] .kit-arc{display:block!important;position:absolute;inset:0;overflow:hidden;perspective-origin:50% 50%;pointer-events:none}
+.kit-arc-stage{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d}
+.kit-arc-frame{left:0;top:0;z-index:auto;visibility:hidden;border-radius:28px;will-change:transform,opacity;backface-visibility:hidden;box-shadow:none}
+#main [data-framer-name="Album Tabs"]{display:flex!important;flex-wrap:nowrap!important;width:max-content!important;max-width:100%!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important;gap:6px!important;padding:6px!important;border-radius:999px!important;scrollbar-width:none;box-sizing:border-box!important}
+#main [data-framer-name="Album Tab"]{flex:0 0 auto!important;width:max-content!important;max-width:none!important;padding:0!important;min-height:0!important;overflow:visible!important}
+#main [data-framer-name="Album Tab"] [data-framer-name="Label Hover"]{display:none!important}
+#main [data-framer-name="Album Tab"] [data-framer-name="Roll"]{transform:none!important;height:auto!important}
+#main [data-framer-name="Album Tab"] [data-framer-name="Label Wrap"],#main [data-framer-name="Album Tab"] [data-framer-name="Label"]{height:auto!important;min-height:22px!important;width:max-content!important;overflow:visible!important}
+#main [data-framer-name="Album Tab"] [tabindex]{background:#ededf0!important;color:#252528!important}
+#main [data-framer-name="Album Tab"] :is([data-framer-name="Active"],[aria-selected=true]){background:#252528!important;color:#fff!important}
+#main [data-framer-name="Album Tab"] [tabindex] p{color:inherit!important;--framer-text-color:inherit!important}
+#main [data-framer-name="Album Tab"] [data-fa-overlay]:after{color:#252528!important}
+#main [data-framer-name="Album Tab"] :is([data-framer-name="Active"],[aria-selected=true]) [data-fa-overlay]:after{color:#fff!important}
+/* The album must remain readable even when reached by keyboard or a tab selection. */
+#main [data-framer-name="Front"] [data-framer-name="Album Card"]{opacity:1!important}
+#main [data-framer-name="Album Tab"] [data-framer-name="Dot Wrap"]{flex-shrink:0!important}
+#main [data-framer-name="Album Card"] [data-framer-name="Info"]{height:auto!important;min-height:0!important}
+#main [data-framer-name="Album Card"] [data-framer-name="Description"]{height:auto!important;max-height:none!important;overflow:visible!important}
+#main [data-framer-name="Album Card"] [data-framer-name="Description"] p{display:block!important;-webkit-line-clamp:unset!important;line-clamp:unset!important;overflow:visible!important;white-space:normal!important;text-overflow:clip!important}
+html[lang=fa] #main [data-framer-name="Album Card"] [data-fa-overlay]:after{overflow:visible;text-overflow:clip}
+#main [data-framer-name="Album Card"] [data-framer-name="Category"]{left:12px!important;right:auto!important;width:max-content!important;max-width:calc(100% - 24px)!important;height:auto!important;min-height:28px!important;padding:6px 10px!important;gap:6px!important;box-sizing:border-box!important}
+#main [data-framer-name="Album Card"] [data-framer-name="Category"] [data-framer-name="Label"]{width:max-content!important;min-width:0!important;height:auto!important;flex:0 1 auto!important}
+html[lang=fa] #main [data-framer-name="Album Card"] [data-framer-name="Category"] [data-fa-overlay]:after{font-size:11px!important;line-height:1.5!important;white-space:normal!important}
+/* Restore the original closing section gradient and bottom glow. */
+#main section[data-framer-name="CTA"] [data-framer-name="Panel"]{background:linear-gradient(180deg,#5bb8fd 0%,#9757f0 55%)!important;background-image:linear-gradient(180deg,#5bb8fd 0%,#9757f0 55%)!important}
+#main section[data-framer-name="CTA"] [data-framer-name="Glow"]{display:block!important;background:radial-gradient(45% 100% at 50% 100%,rgba(43,238,25,.28) 0%,rgba(43,238,25,0) 100%)!important;pointer-events:none!important}

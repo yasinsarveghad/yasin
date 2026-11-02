@@ -1,0 +1,92 @@
+[
+  {
+    "folder": "ys",
+    "role": "platform",
+    "file": "ys-platform.webp"
+  },
+  {
+    "folder": "ys",
+    "role": "hero",
+    "file": "ys-hero.webp"
+  },
+  {
+    "folder": "ys",
+    "role": "tool",
+    "file": "ys-tool.webp"
+  },
+  {
+    "folder": "automation",
+    "role": "platform",
+    "file": "automation-platform.webp"
+  },
+  {
+    "folder": "automation",
+    "role": "hero",
+    "file": "automation-hero.webp"
+  },
+  {
+    "folder": "automation",
+    "role": "tool",
+    "file": "automation-tool.webp"
+  },
+  {
+    "folder": "ai",
+    "role": "platform",
+    "file": "ai-platform.webp"
+  },
+  {
+    "folder": "ai",
+    "role": "hero",
+    "file": "ai-hero.webp"
+  },
+  {
+    "folder": "ai",
+    "role": "tool",
+    "file": "ai-tool.webp"
+  },
+  {
+    "folder": "web",
+    "role": "platform",
+    "file": "web-platform.webp"
+  },
+  {
+    "folder": "web",
+    "role": "hero",
+    "file": "web-hero.webp"
+  },
+  {
+    "folder": "web",
+    "role": "tool",
+    "file": "web-tool.webp"
+  },
+  {
+    "folder": "strategy",
+    "role": "platform",
+    "file": "strategy-platform.webp"
+  },
+  {
+    "folder": "strategy",
+    "role": "hero",
+    "file": "strategy-hero.webp"
+  },
+  {
+    "folder": "strategy",
+    "role": "tool",
+    "file": "strategy-tool.webp"
+  },
+  {
+    "folder": "integrations",
+    "role": "platform",
+    "file": "integrations-platform.webp"
+  },
+  {
+    "folder": "integrations",
+    "role": "hero",
+    "file": "integrations-hero.webp"
+  },
+  {
+    "folder": "integrations",
+    "role": "tool",
+    "file": "integrations-tool.webp"
+  }
+]

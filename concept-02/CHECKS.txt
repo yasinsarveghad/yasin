@@ -1,0 +1,54 @@
+Revision 03 / 2026-10-21
+JavaScript syntax: PASS (node --check).
+Browser verification: desktop 1440x900, tablet 820x1180, phone 390x844 and 320x740.
+Desktop: same dock expands to 260px, seven destinations, no modal; route selection and Escape collapse verified. Expanded dock right=290px, content left=318px.
+Materials: computed dock #e5e5ea, backdrop-filter none; lens saturate(1.3) contrast(1.04), no blur. Navigation strokes 2.5px.
+Mobile/tablet: pairing card opens, routes work, Done dismissal restores body scrolling. Live downward drag dismissal verified at 320px. No horizontal overflow; smallest dock hit target 44.5x52px.
+Hidden dock footer removed from accessibility tree when collapsed.
+Reduced motion: implementation skips spring travel; system preference was not emulated in this QA.
+No browser console errors observed in tested flows.
+Glass is a web interpretation, not Apple's native rendering material.
+Original website untouched. Concept remains separate for approval.
+Transfer to D is incomplete: write permissions were not granted this turn. All authoritative source remains in the current C workspace.
+
+Revision 05 / Original symbols / 2026-10-21
+Replaced all 13 handmade prototype glyphs with a coherent original SVG family; these are not SF Symbols.
+Actual computed desktop dock: 25px size, 2.25-unit stroke. Expanded dock: 24px, 2.2. Mobile dock: 24px, 2.3. Pairing menu: 23px, 2.2. Utilities: 20px, 2.2. Small close glyph: 14px, 2.5.
+JavaScript syntax verified for both symbols.js and design.js.
+Browser checks: expanded desktop dock (1440x900), phone dock and pairing card (390x844). All 7 card symbols verified at 23px/2.2. Settled phone scrollWidth=390, viewport=390, no horizontal overflow. Done dismissal works. No console errors observed.
+Family sheet uses the same renderer as the application. SVG exports are supplied individually under symbols/.
+Earlier measurements above describe revision 03; current metrics are those in this revision 05 entry.
+
+Revision 06: simplified original icon family. Work=folder, Services=stacked surfaces, Appearance=crescent. Uniform outline style; removed small clasps, overlapping seams, decorative sparkles and filled profile head. Desktop 24px / 2-unit stroke; phone menu 22px / 2-unit stroke. Verified actual computed styles, expanded desktop menu, phone card, no overflow at 390px, no observed console errors. JavaScript syntax checked.
+
+Motion revision / 2026-10-21 / cache key motion-2
+Symbol silhouettes retained. Added independent SVG part choreography and moon/sun theme state.
+Verified: main Work route starts motion and navigates immediately; actual live part transforms and opacity observed. All 12 non-theme icon motions exercised through the shared interactive study; no observed console errors. After completion running=0 and Work transient layers return to opacity=0.
+Theme: desktop transition, two rapid toggles restore the initial state while the expanded dock remains open; mobile native dialog theme change and keyboard Enter reversal verified. Final dark modal uses readable light icon color (#f5f5f7 selected) and a contrasting Done control.
+Reduced-motion and unsupported-View-Transition branches are implemented; system preference/unsupported engine were not emulated in this QA. No frame-rate benchmark was performed.
+Syntax checks passed for design.js, symbols.js and symbol-motion.js.
+
+Smooth timing revision / cache key motion-smooth-1
+Replaced segmented motion keyframes with continuous spring trajectories and position/velocity handoff. All 12 non-theme icon effects exercised. Rapid folder reactivation observed without resetting transient opacity to zero. Completion restores static layers.
+Theme now uses reversible live color transitions (computed 0.36s) and a clipped, pointer-transparent cue. Four rapid desktop toggles restore initial light state, aria-pressed=false, dock remains expanded. Navigation to Work during theme animation works immediately. Three rapid mobile toggles from dark produce light; one cue layer is reused and hidden on completion. Mobile scrollWidth=380 <=390 viewport; no cue overflow. No browser console errors observed in tested flows.
+Keyboard/reduced-motion branches inspected; keyboard behavior was verified in the prior revision, but this revision's new keyboard branch was not independently completed in UI because the user navigated during the check. Reduced-motion preference was not emulated. No frame-rate benchmark or zero-bug guarantee.
+Earlier snapshot-based theme statements above describe the previous revision and are superseded by this entry and MOTION.md.
+
+Landing revision / motion-landing-1
+Verified actual Work completion using a bounded wait for the live SVG data-motion=idle state. Folder back commits identity transform / opacity 1; paper and front commit identity / opacity 0. Repeated Work activation verified. All 12 icon effects exercised without observed browser console errors. Endpoint transforms remain explicitly recorded after effects finish. Full-page snapshots and coordinate-based theme click interception remain absent. No frame-rate benchmark or universal zero-bug guarantee.
+
+Expressive motion + favicon / motion-expressive-2
+All 12 non-theme effects exercised; complete durations measured through the actual SVG duration metadata, from 517 to 833 ms. Work waits successfully for idle with its longer timeline. Mobile Work navigation starts both card and persistent-dock motion (833 ms), routes immediately, and completes after the card exits. No browser console errors observed in tested flows.
+Favicon: supplied 1024x1024 transparent logo source retained; transparent bounds (283,304,755,726) used to fit the mark legibly into icon tiles. SVG, multi-size ICO, PNG16/32/48/64 and 180px touch icon exported. Links installed on concept index, symbol study, device study and original sidefolio page. Browser icon preview images loaded successfully and inspected on light/dark backgrounds; actual head references verified.
+
+Transparent favicon / ys-transparent-2: PNG16/32/48/64/180 exported. Matching light/dark alpha channels and transparent corners asserted. ICO16/32/48 validated. All favicon paths in four entry pages exist; old ys1 head references removed. Browser preview: all 13 images including adaptive SVG loaded; light/dark rows visually reviewed. Main page head media links verified. Automatic dark scheme CSS configured; system preference switching was not emulated.
+
+ys-profile-1: syntax, six content renderers, brief scope and literal text input, script order and default route verified. Favicon96% matched transparent light/dark masks verified. Visual browser QA blocked by URL verification; not claimed complete. See PROFILE-SOURCES.md.
+
+layout-fix-2: reproduced narrow mobile service descriptions caused by an unplaced wrapper in the service-row grid. Added explicit grid placement and min-width safeguards; stabilized initial dock/page geometry before transitions; corrected brief typography. Actual headless Chrome checked all 7 pages at360,390,820,1440px: no horizontal overflow, service description width>=150px, all headings present, form review works, mobile menu/theme/route dismissal works, desktop expanded dock works. No page runtime errors. Screenshots reviewed at390/1440.
+
+ys-profile-1: syntax, six content renderers, brief scope and literal text input, script order and default route verified. Favicon96% matched transparent light/dark masks verified. Visual browser QA blocked by URL verification; not claimed complete. See PROFILE-SOURCES.md.
+
+work-live-1:approved Work integrated. Full route/gallery/responsive/hover/lifecycle checks passed;no missing assets or runtime errors. See WORK-INTEGRATION.md.
+
+Home integration (2026-10-31): approved concept replaces Home at original index URL. EN/FA 26 resize cases, 6 appearance cases, 3 route roundtrips passed. See HOME-INTEGRATION.md.

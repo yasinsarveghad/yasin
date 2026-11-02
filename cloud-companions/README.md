@@ -1,0 +1,8 @@
+# Cloud Companions / Motion study01
+Independent interactive motion concept based on the user's12-character reference. The portfolio itself is unchanged.
+12 blank tactile cloud bodies generated with image_gen from the supplied reference, retaining each character's color family. Full transparent PNG sources retained under assets/originals;560px transparent WebP runtime exports. Faces,hands,arms and feet are original SVG layers built for animation, not a single moving flattened reference image.
+Acts:NIM mindful bow;LUMA open-arm float;PIP wink and playful step;SOL overhead cheer and hop;MIRA shy cheeks/sway;NOVA salute/scan;ZEN breath/prayer levitation;RUE seated foot swing;KAI wave and lean;FAY surprised double bounce;ORI determined alternating march;NOX sleepy breathing/nod.
+CSS motion uses independent coordinated transform/opacity layers and continuous return poses. No idle JavaScript animation loop. Primary body action,secondary limbs/face and supporting shadows. White exterior linework has subtle depth for contrast on the light background.
+Controls:pause/play,speed0.5/1/1.5,restart,seek;click any character for a larger native-dialog view with its act description and replay. Escape closes and restores focus. Reduced-motion preference starts paused and pauses on a preference change;manual Play remains available. Hidden document pauses animations.
+QA:12 decoded body assets;each character has at least3 live animation layers;pause freezes transforms;play/speed/seek verified;all12 dialogs and Escape;360/390/820px no horizontal overflow;reduced-motion starts paused;no runtime errors or missing requests. Full board visually inspected and line contrast refined.
+Preview:http://127.0.0.1:4185/cloud-companions/

@@ -1,0 +1,24 @@
+.appearance-toggle{position:absolute;z-index:112;right:20px;top:68px;width:40px;height:40px;display:grid;place-items:center;border:1px solid #ffffffb3;border-radius:50%;background:#ffffffb3;color:#45454d;backdrop-filter:blur(16px);cursor:pointer;box-shadow:0 4px 15px #00000008}.appearance-toggle svg{width:20px;height:20px}.appearance-toggle:focus-visible{outline:2px solid #007aff;outline-offset:3px}
+html[data-theme=dark],html[data-theme=dark] body{background:#111114!important;color:#f5f5f7}
+html[data-theme=dark] #main [data-appearance-surface=canvas]{background-color:#17171b!important}
+html[data-theme=dark] #main [data-appearance-surface=card]{background-color:#25252c!important}
+html[data-theme=dark] #main [data-appearance-ink=primary]{color:#f5f5f7!important;--framer-text-color:#f5f5f7!important;--locale-color:#f5f5f7!important}
+html[data-theme=dark] #main [data-appearance-ink=secondary]{color:#b6b6c1!important;--framer-text-color:#b6b6c1!important;--locale-color:#b6b6c1!important}
+html[data-theme=dark] #main [data-fa-overlay]:after{color:var(--locale-color,#f5f5f7)!important}
+html[data-theme=dark] .te-hero{background:#25252d!important}html[data-theme=dark] .te-copy h1{color:#f5f5f7!important}html[data-theme=dark] .te-tray{background:#111114!important}
+html[data-theme=dark] :is(.language-toggle,.concept-library-button,.appearance-toggle){background:#2b2b35d9!important;color:#f5f5f7!important;border-color:#ffffff20!important}html[data-theme=dark] .language-selection{background:#4a4a56!important;box-shadow:none}html[data-theme=dark] .language-toggle button{color:#aaaab6}html[data-theme=dark] .language-toggle button[aria-pressed=true]{color:#fff}
+html[data-theme=dark] .concept-library{background:#1c1c22;color:#f5f5f7}html[data-theme=dark] .library-item{background:#292931}
+html[data-theme=dark] #main a.framer-COTOK{background:#f5f5f7!important;color:#202026!important}html[data-theme=dark] #main a.framer-COTOK p{color:#202026!important;--locale-color:#202026!important}html[data-theme=dark] #main a.framer-COTOK [data-fa-overlay]:after{color:#202026!important}
+html[data-theme=dark] #main a.framer-COTOK[data-framer-name=Secondary]{background:#303039!important;color:#f5f5f7!important;border-color:#ffffff20!important}html[data-theme=dark] #main a.framer-COTOK[data-framer-name=Secondary] p,html[data-theme=dark] #main a.framer-COTOK[data-framer-name=Secondary] [data-fa-overlay]:after{color:#f5f5f7!important;--locale-color:#f5f5f7!important}
+html[data-theme=dark] #main [data-framer-name="Album Tab"] [tabindex]{background:#303039!important;color:#f5f5f7!important}html[data-theme=dark] #main [data-framer-name="Album Tab"] [data-fa-overlay]:after{color:#f5f5f7!important}html[data-theme=dark] #main [data-framer-name="Album Tab"] :is([data-framer-name=Active],[aria-selected=true]){background:#565663!important}
+html[data-theme=dark] #main [data-framer-name="Service Tile"] [data-framer-name=Tint],html[data-theme=dark] #main [data-framer-name="Service Tile"] [data-framer-name=Tail]{background:#303039!important}
+html[data-theme=dark] .locale-fields select{background:#25252c!important;color:#f5f5f7!important;border-color:#50505a!important}
+html[data-theme=dark] #main :is(input,textarea){background:#25252c!important;color:#f5f5f7!important;border-color:#50505a!important}
+html[data-theme=dark] #main section[data-framer-name=CTA] :is(h2,p){color:#252528!important;--framer-text-color:#252528!important;--locale-color:#252528!important}html[data-theme=dark] #main section[data-framer-name=CTA] [data-fa-overlay]:after{color:#252528!important}
+@media(max-width:599px){.appearance-toggle{right:14px;top:62px;width:36px;height:36px}}
+html[data-theme=dark] .te-stage,html[data-theme=dark] .te-portrait-thumbnail{background:#25252d!important}
+html[data-theme=dark] .te-tray:before{box-shadow:20px 20px 0 #111114!important}html[data-theme=dark] .te-tray:after{box-shadow:-20px 20px 0 #111114!important}
+html[data-theme=dark] .te-playback{background:#303039;color:#e5e5ea}
+html[data-theme=dark] .concept-faq-question{color:#f5f5f7!important}html[data-theme=dark] .concept-faq-item{border-color:#ffffff20!important}
+html[data-theme=dark] #main :is([data-framer-name="Headline Chip"],[data-framer-name="Icon Box"],[data-framer-name="Tail"]) svg{color:#b6b6c1!important;--21h8s6:#b6b6c1!important}
+html[data-theme=dark] .concept-create-inner{color:#f5f5f7}html[data-theme=dark] .concept-mode-art{background:#303039!important}

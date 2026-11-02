@@ -1,0 +1,49 @@
+QUIET GLASS — YASIN SARVEGHAD / CONCEPT 01
+
+This is a separate design concept. No existing website source was modified.
+
+REFERENCE SYNTHESIS
+Dream OS and the smart-home reference: spacious composition, compact navigation,
+and clear divisions between image-led content and quiet controls.
+Share popover: floating, rounded surface; internal selection pills; gentle shadow.
+The coloured button and diagram references: restrained blue, violet and peach
+light behind pale surfaces; soft illuminated edges.
+Status buttons: semantic green / blue / orange rather than colour everywhere.
+The graph and icon references: consistent outline icons and weight-led hierarchy.
+
+SITE DIRECTION
+Retain Home, About, Work, Services, Store, Blog/Notes and Contact as destinations.
+Rework the fixed sidebar into a floating rail with visible short labels.
+Keep product filters, grid/list, detail previews, saved products, theme, search,
+contact and footer. The website board is a first-viewport Store proposal and
+shows two product specimens; filters demonstrate the alternative product types.
+The sample CTA and search open isolated surface studies; no data is submitted.
+Mobile dock in the component board is a visual direction; a final mobile menu
+would retain access to every destination.
+
+MATERIAL
+Warm/cool neutral pearl canvas #F8F9FB, graphite text #25282F.
+Full glass treatment on floating navigation, popovers and selected controls.
+Content is supported by a quieter matte surface. Product images retain depth.
+Thin optical edges, layered low-opacity shadows, generous 20–28px corners.
+Localized blue/violet/peach reflections, without a full-page coloured wash.
+The browser implementation would approximate the material with layered CSS;
+the concept does not claim native Apple optical refraction.
+
+TYPE
+Actual supplied SF Pro Display. Display 60–64px / Medium 500, body 14–16px /
+Regular 400. Clear small labels with restrained, size-aware letter spacing.
+Before production, small-text and border contrast would be validated across
+light/dark and high-contrast settings; the current board is an aesthetic study.
+
+MOTION PROPOSAL
+Press 120–160ms. Hover 160–180ms. Surface transitions 240–300ms.
+Responsive, interruptible and critically damped. No ambient animation loops.
+Transform and opacity carry motion; reduced-motion and reduced-transparency
+equivalents remain part of implementation. Static boards cannot verify feel.
+The HTML concept includes a few hover, press, filter and native dialog specimens.
+
+REVIEW
+Confirm the overall direction, then implementation can be applied to the site.
+Focus feedback on: glass amount, colour amount, roundness, type weight and
+the floating navigation rail. Existing site remains unchanged until approval.

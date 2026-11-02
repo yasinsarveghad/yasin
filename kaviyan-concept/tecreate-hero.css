@@ -1,0 +1,51 @@
+@font-face{font-family:'Tecreate Funnel';src:url('tecreate-assets/funnel.woff2') format('woff2');font-weight:300 900;font-display:swap}
+#concept-canvas{width:100%;margin:0;min-width:0;overflow:clip;padding-bottom:100px}
+.te-hero{position:relative;height:clamp(650px,49vw,940px);background:#fff;isolation:isolate;font-family:'Tecreate Funnel',Arial,sans-serif;color:#1e1e1e}
+.te-stage{position:absolute;inset:0;overflow:hidden;background:#e3e8eb}
+.te-scene{position:absolute;inset:0;opacity:0;transition:opacity 600ms cubic-bezier(.23,1,.32,1);pointer-events:none}
+.te-scene.is-active{opacity:1;z-index:1}
+.te-scene img,.te-scene>video{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;max-width:none}
+.te-scene[data-scene=portraits] img{object-fit:fill}
+.te-scene[data-scene=studio]:after,.te-scene[data-scene=plant]:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,#ffffffa8,transparent 70%)}
+.te-copy{position:absolute;z-index:3;left:50%;top:23%;width:58%;text-align:center;transform:translateX(-50%);pointer-events:none}
+.te-word{color:#fff;font-size:clamp(110px,10vw,205px);font-weight:600;line-height:.96;letter-spacing:-.065em;margin:0 0 28px}
+.te-copy h1{font-size:clamp(30px,3.2vw,60px);font-weight:550;line-height:1.25;letter-spacing:-.03em;margin:0 auto;text-wrap:balance}
+.te-tray{box-sizing:border-box;position:absolute;z-index:5;bottom:0;left:50%;transform:translateX(-50%);width:65%;padding:18px 4% 18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;background:#fff;border-radius:44px 44px 0 0}
+.te-tray:before,.te-tray:after{content:'';position:absolute;bottom:0;width:40px;height:40px;background:transparent;pointer-events:none}
+.te-tray:before{right:100%;border-radius:0 0 40px 0;box-shadow:15px 15px 0 15px #fff}
+.te-tray:after{left:100%;border-radius:0 0 0 40px;box-shadow:-15px 15px 0 15px #fff}
+.te-preview{position:relative;display:block;width:100%;aspect-ratio:5/3;overflow:hidden;border:0;border-radius:12px;padding:0;background:#e5e9eb;cursor:pointer;transition:transform 260ms cubic-bezier(.23,1,.32,1);outline-offset:5px}
+.te-preview img,.te-preview video{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.te-preview video{opacity:0;transition:opacity .3s ease}.te-preview video.is-playing{opacity:1}
+.te-preview:focus-visible,.te-playback:focus-visible{outline:2px solid #51566b;outline-offset:4px}
+.te-playback{position:absolute;right:12px;bottom:3px;width:24px;height:24px;border:0;border-radius:50%;background:#fff;color:#8c9198;display:grid;place-items:center;cursor:pointer;padding:5px}
+.te-playback svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+@media(hover:hover) and (pointer:fine){.te-preview:hover{transform:translateY(-3px)}.te-playback:hover{color:#30343b}}
+@media(max-width:1099px){.te-hero{height:740px}.te-copy{top:22%;width:68%}.te-word{font-size:125px}.te-copy h1{font-size:34px}.te-tray{width:80%;gap:18px;padding:20px 24px}.te-scene[data-scene=portraits] img{object-fit:cover;object-position:center top}}
+@media(max-width:599px){
+.te-hero{height:760px}.te-copy{width:calc(100% - 36px);top:72px}.te-word{font-size:clamp(88px,25vw,140px);margin-bottom:20px}.te-copy h1{font-size:28px;max-width:340px}
+.te-scene[data-scene=portraits] img{content:url('tecreate-assets/mobile-portraits.png');position:absolute;top:310px;left:0;width:100%;height:auto;object-fit:contain;object-position:center top}
+.te-tray{width:calc(100% - 28px);padding:16px 14px 24px;gap:10px;border-radius:28px 28px 0 0}.te-preview{aspect-ratio:1.22;border-radius:10px}.te-tray:before,.te-tray:after{width:14px;height:24px}.te-tray:before{border-radius:0 0 14px 0;box-shadow:8px 12px 0 8px #fff}.te-tray:after{border-radius:0 0 0 14px;box-shadow:-8px 12px 0 8px #fff}
+}
+@media(prefers-reduced-motion:reduce){.te-scene,.te-preview,.te-preview video{transition:none}.te-preview:hover{transform:none}}
+body>.concept-library-button{position:absolute;top:16px;right:20px;left:auto!important;bottom:auto!important;z-index:100;width:max-content}
+@media(max-width:599px){body>.concept-library-button{top:14px;right:14px;font-size:9px;padding:9px 12px}}
+.te-preview[data-preview=portraits] img,.te-preview[data-preview=portraits] video{object-fit:fill}
+@media(min-width:600px) and (max-width:1099px){.te-hero{height:850px}.te-copy{top:65px;width:85%}.te-word{font-size:125px;margin-bottom:18px}.te-copy h1{font-size:34px}.te-scene[data-scene=portraits] img{content:url('tecreate-assets/mobile-portraits.png');position:absolute;top:290px;left:50%;transform:translateX(-50%);width:540px;height:auto;object-fit:contain}.te-tray{width:80%}}
+@media(max-width:599px){.te-hero{height:calc(100svh - 94px);min-height:640px}.te-scene[data-scene=portraits] img{top:280px}}
+/* Personal transparent portraits: independent framing preserves the complete face. */
+.te-scene[data-scene=portraits] .te-person{content:normal;position:absolute;bottom:auto;object-fit:contain;height:auto;max-width:none;transform:none}
+.te-scene[data-scene=portraits] .te-person-left{width:38%;left:-8%;top:65px}
+.te-scene[data-scene=portraits] .te-person-right{width:52%;right:-8%;left:auto;top:65px}
+.te-portrait-thumbnail{position:absolute;inset:0;overflow:hidden;background:#e3e8eb}
+.te-preview .te-portrait-thumbnail img{height:auto;object-fit:contain;top:10%;width:65%}
+.te-preview .te-portrait-thumbnail .thumb-left{left:-8%;right:auto;width:47%}
+.te-preview .te-portrait-thumbnail .thumb-right{left:auto;right:-10%}
+@media(min-width:1800px){.te-scene[data-scene=portraits] .te-person-left,.te-scene[data-scene=portraits] .te-person-right{top:90px}}
+@media(max-width:1099px){.te-scene[data-scene=portraits] .te-person-left{display:none}.te-scene[data-scene=portraits] .te-person-right{width:620px;right:auto;left:50%;top:305px;transform:translateX(-62%);height:auto}}
+@media(max-width:599px){.te-scene[data-scene=portraits] .te-person-right{width:125%;top:285px;left:50%;right:auto;transform:translateX(-62%);height:auto}}
+/* Compact hero: bring the portrait into the composition rather than below it. */
+@media(max-width:1099px){.te-copy{top:62px}.te-copy h1{font-size:32px;line-height:1.18}.te-scene[data-scene=portraits] .te-person-right{top:245px}}
+@media(max-width:599px){.te-copy{top:62px}.te-word{font-size:clamp(100px,29vw,160px);margin-bottom:16px}.te-copy h1{font-size:26px;line-height:1.18}.te-scene[data-scene=portraits] .te-person-right{top:230px;width:125%}}
+@media(max-height:760px) and (max-width:1099px){.te-hero{height:calc(100svh - 86px);min-height:550px}.te-copy{top:45px}.te-word{font-size:clamp(96px,22vw,150px);margin-bottom:12px}.te-copy h1{font-size:26px}.te-scene[data-scene=portraits] .te-person-right{top:200px;width:min(620px,125%)}.te-tray{padding-top:14px;padding-bottom:18px}}
+@media(max-width:599px){.te-copy h1{font-size:24px;max-width:100%;white-space:nowrap}.te-copy h1 br{display:none}}

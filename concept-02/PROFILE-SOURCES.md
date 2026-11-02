@@ -1,0 +1,9 @@
+# Profile content / ys-profile-1
+Source: nine user-provided LinkedIn screenshots dated in the filenames 2026-10-23. Read directly from attached images.
+Included: name Yasin Sarveghad; founder of YS AI Syndicate; AI business systems, intelligent automation, business architecture; project management and planning; self-education through execution; API and eCommerce learning; mentoring early-stage innovators; education, technology and economic empowerment interests.
+User direction controls the professional positioning: AI specialist, automation designer, website builder. Site remains English, matching the existing interface.
+Founder role has no start date: screenshots show inconsistent dates across experience, project and organisation sections. Truncated details are not reconstructed. Self-issued certificates are not presented as third-party accreditation. No percentile, client result, award, contact detail or credential link was invented.
+Project directions are service capabilities, not claimed completed client projects. YS initiative is described without unsupported deployment/revenue results. Existing store template examples retained; work page now separates the real founder initiative from those template previews.
+Form creates a reviewable local text brief and offers download. No server, email or external recipient is configured; visible copy states this. No submitted content persisted.
+Favicon maximum dimension increased to 96% with transparent corners, common light/dark mask, no background tile. Original supplied source files retained.
+Validation: JavaScript syntax checks; six content render functions checked in isolated VM; brief generation tested with selected scope and literal markup input. Browser visual QA interrupted by Computer Use URL-verification block before loading the new site; desktop/mobile appearance not visually verified in this revision.

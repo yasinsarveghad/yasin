@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "count": 12,
+  "source": "Original Cloud Companions character study",
+  "components": "SVG facial/limb rig with transparent cloud body; CSS acts",
+  "entrypoints": [
+    "characters.js",
+    "characters.css"
+  ],
+  "preview": "../../cloud-companions/"
+}

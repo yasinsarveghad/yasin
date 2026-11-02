@@ -1,0 +1,33 @@
+26 October 2026 · Local Chrome verification
+
+Tecreate opening revision: Tecreate added first, original Kaviyan hero fully restored second, three local preview videos decode/play, three scenes switch, pause/play works, offscreen playback stops, reduced motion pauses previews. Later Kaviyan content remains present. Desktop and expanded navigation have exclusive clearance; 1280/1100/820/390 layouts do not overflow. Mobile heading clears the portrait and preview tray clears the bottom navigation. No runtime/missing-media errors in the checked flows.
+
+Full first-page composition: all twenty main/nested sections retained.
+Five animated Cloud Companions replace the five template agents at every repeated size.
+Twelve-character library opens and closes with Escape.
+Creation modes, album selection, team selection, monthly/annual pricing and FAQ verified.
+Destination navigation and contact submission intentionally disconnected.
+390px and 820px section layouts checked without horizontal page overflow.
+Reduced-motion pauses the character library animations; animated SVGs contain their own reduced-motion rules.
+Local reference assets/fonts/runtime retained; no external resource requests in the checked flow.
+No runtime or missing-resource errors in the checked flows.
+Original portfolio Work preview still renders six folders and its detail dialog correctly.
+
+Stacked-home regression: consecutive section order; five original cloud actors; original pinned hero and scroll sentence; 1920/1440/1280/1100 desktop widths; opening/closing dock clearance; all main-page interactive bounds within canvas in closed/expanded states; 820/390 layouts; no runtime/missing-asset errors.
+
+Revision bottom-3: Full-width canvas restored. Desktop dock is horizontal at the bottom; More expands the same dock horizontally to seven destinations and three utility controls. Compact layouts retain the pairing sheet. Tecreate tray joins the white section edge with concave shoulders. Video posters remain visible until playback. Tablet/mobile use the complete single portrait with an uncropped head.
+Validation: five viewports 1440, 1100, 820, 390, 360; no horizontal overflow or JavaScript errors; all three preview videos ready and playing; poster fallbacks loaded; desktop expansion and Escape/search checked; original Kaviyan opening and sticky stage retained.
+
+Language QA: 1920,1440,820,390,360 widths. Persian direction, text translation, full-width canvas, no horizontal page overflow, no runtime errors or missing assets. EN/FA round trip, persisted language after reload, Persian navigation search and changing gallery content verified. Code and brand names intentionally preserve their original spelling.
+
+Cleanup QA: passed English and Persian at 1440×900, 640×760 and 390×844. Requested sections have no layout footprint and are inert/hidden from accessibility. Decorative icon boxes are transparent. CTA buttons retain visible labels on hover, 44px height and pill radii. Ending gallery is present at desktop and phone sizes. No horizontal page overflow or JavaScript runtime errors during the tested flows.
+
+Audit — revision audit-9
+Fixed the Connected section's opaque half-background. The old accent normalizer converted a transparent radial glow into a solid rectangle; gradient accents now retain transparency and this section's two decorative glows are removed. Replaced the inert template FAQ with keyboard-accessible expandable answers using the retained template's five original questions/answers. Localized select controls are isolated from the template runtime, keep their original form values and validation, and support the form's Tab / Shift+Tab sequence. Fixed duplicate native-select arrows and added translation support for smaller heading levels.
+Verified English and Persian at 1840×840, 1440×900, 820×1180, 640×760, 390×844 and 360×740. Checks cover Connected backgrounds, page overflow, FAQ mouse/keyboard interaction, gallery switching, team navigation, create-mode cards, ending artwork and button sizing. All 12 cases completed without runtime or asset errors. Additional checks verified localized form values/FormData, keyboard order, switching languages, persisted locale and Persian navigation search. This is a concept; destination links and external message submission remain intentionally disconnected.
+
+Responsive refinement 10 (2026-10-30): ending gallery uses container-relative geometry and balanced bilingual headings; service arrow surfaces use pale gray; Build timeline uses Apple blue including compact layouts. Fixed localization writes escaping template boundaries during viewport changes. Checked EN/FA at 320,360,390,599,600,768,809,810,1024,1099,1100,1440,1920px with continuous resizing: no horizontal overflow or runtime errors. Native Persian form, keyboard order and locale switching pass. Live reference timed out; retained local template used for comparison. Checks: work/resize-10.log, work/form-10.log. Earlier broad interaction audit had a mobile gallery selector failure, corrected gallery lookup to use its section rather than breakpoint-dependent anchor.
+
+Restoration 11 (2026-10-31): replaced static end-gallery fallback with the retained original component's cylindrical projection, varying card aspect ratios, continuous 5deg/sec motion and 2.2s introduction. Neutral layered background, resize observation, offscreen/document pause and reduced-motion support. Album tabs now size to labels, scroll on compact widths, show a single label and maintain active contrast. Album card opacity/content and category chip sizing corrected. Animation checked in EN/FA at 320,390,599,600,768,810,1024,1200,1440,1920; reduced motion passes. Album selections checked in both languages. Logs: work/audit-11.log, work/albums-11.log, work/resize-11-final.log.
+
+Appearance 13: page-wide light/dark modes, initial system preference, persisted choice, accessible top appearance button and synchronized portfolio navigation theme control. Adaptive neutral surfaces/text/inputs, Persian overlay colors, hero/tray, FAQ and library styling; original closing gradient preserved. EN/FA at390/768/1440: switch, reload persistence, light restore, no overflow/runtime errors. Navigation theme synchronization passes. Screenshots work/theme-final-hero.png and work/theme-final-connected.png. Logs work/theme-test.log.

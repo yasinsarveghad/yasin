@@ -1,0 +1,34 @@
+@font-face{font-family:Vazirmatn;src:url('assets/vazirmatn-variable.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+.language-toggle{position:absolute;z-index:110;top:16px;left:20px;display:flex;align-items:center;gap:4px;padding:5px;width:174px;height:46px;border:1px solid #ffffffd9;border-radius:30px;background:#ffffff9c;box-shadow:0 5px 18px #26324309,inset 0 1px 0 #fff;backdrop-filter:blur(18px);direction:ltr;isolation:isolate;box-sizing:border-box}
+.language-toggle button{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:8px;width:78px;height:34px;padding:0;border:0;background:none;color:#777e87;border-radius:22px;font:500 12px/1 Vazirmatn,Arial,sans-serif;cursor:pointer;transition:color .25s ease,transform .2s ease}
+.language-toggle button[aria-pressed=true]{color:#20252b}.language-toggle button:active{transform:scale(.95)}.language-toggle button:focus-visible{outline:2px solid #7e75b1;outline-offset:2px}
+.language-toggle svg{width:28px;height:21px;overflow:hidden;border-radius:4px;filter:saturate(.85);box-shadow:0 0 0 .5px #00000012}
+.language-selection{position:absolute;left:5px;top:5px;width:78px;height:34px;border-radius:24px;background:#fff;box-shadow:0 2px 6px #17243312,inset 0 0 0 1px #fff;transition:transform .48s cubic-bezier(.22,.8,.2,1);pointer-events:none}.language-toggle[data-language=fa] .language-selection{transform:translateX(82px)}
+html[lang=fa] body{font-family:Vazirmatn,Tahoma,sans-serif}
+html[lang=fa] :is(p,h1,h2,h3,h4,h5,label,input,textarea,select,option,button,[data-localized]){font-family:Vazirmatn,Tahoma,sans-serif!important;letter-spacing:0!important}
+html[lang=fa] :is(p,h1,h2,h3,h4,h5)[dir=auto]{direction:rtl}
+html[lang=fa] [data-localized] span{white-space:normal!important}
+html[lang=fa] p[data-localized]{line-height:1.8!important}
+html[lang=fa] :is(h1,h2,h3)[data-localized]{line-height:1.45!important}
+html[lang=fa] .te-copy{direction:rtl;width:58%}
+html[lang=fa] .te-word{line-height:1.2;font-size:clamp(96px,9vw,180px)}
+html[lang=fa] .te-copy h1{font-size:clamp(26px,2.5vw,46px);line-height:1.6!important;white-space:normal;text-wrap:balance}
+html[lang=fa] .te-stage,html[lang=fa] .te-tray,html[lang=fa] [data-framer-name=Fan],html[lang=fa] #timeline{direction:ltr}
+html[lang=fa] #hero-track h1{font-size:clamp(44px,7vw,110px)!important}
+html[lang=fa] #hero-track [data-framer-name="Line 2"]{direction:rtl}
+html[lang=fa] [data-framer-component-type=RichTextContainer]{min-width:0}
+html[lang=fa] input[type=email],html[lang=fa] input[type=url],html[lang=fa] input[type=tel],html[lang=fa] pre,html[lang=fa] code{direction:ltr;text-align:left;unicode-bidi:isolate}
+html[lang=fa] textarea,html[lang=fa] input[type=text]{text-align:start}
+html[lang=fa] .concept-library,html[lang=fa] .concept-toast{direction:rtl;text-align:right}
+@media(max-width:1099px){html[lang=fa] .te-copy{width:90%}html[lang=fa] .te-word{font-size:120px}html[lang=fa] .te-copy h1{font-size:27px}}
+@media(max-width:599px){.language-toggle{top:14px;left:14px;width:144px;height:40px;padding:4px;gap:2px}.language-toggle button{width:66px;height:30px;gap:5px;font-size:11px}.language-toggle svg{width:24px;height:18px}.language-selection{left:4px;top:4px;width:66px;height:30px}.language-toggle[data-language=fa] .language-selection{transform:translateX(68px)}body>.concept-library-button{max-width:calc(100% - 180px);font-size:8px!important;padding:9px 10px!important}html[lang=fa] .te-copy{width:calc(100% - 32px)}html[lang=fa] .te-word{font-size:100px;margin-bottom:10px}html[lang=fa] .te-copy h1{font-size:22px;line-height:1.6!important}html[lang=fa] .te-scene[data-scene=portraits] .te-person-right{top:250px}}
+@media(prefers-reduced-motion:reduce){.language-toggle button,.language-selection{transition:none}}
+/* Pre-rendered third-party regions retain their source text until hydration. */
+html[lang=fa] #main [data-fa-overlay]{font-size:0!important;line-height:0!important;color:transparent!important}
+html[lang=fa] #main [data-fa-overlay]>span{display:none!important}
+html[lang=fa] #main [data-fa-overlay]:after{content:attr(data-fa-overlay);display:block;font-family:Vazirmatn,Tahoma,sans-serif;font-size:var(--locale-size,16px);line-height:var(--locale-leading,1.65);color:var(--locale-color,#252528);direction:rtl;letter-spacing:0;white-space:normal}
+html[lang=fa] #main a.framer-COTOK [data-fa-overlay]:after{white-space:nowrap;color:inherit;color:var(--locale-color,#fff)}
+#main select[data-template-select]{visibility:hidden!important;pointer-events:none!important}
+
+.locale-fields{position:absolute;inset:0;pointer-events:none;z-index:100;direction:ltr}.locale-fields select{max-width:100vw;cursor:pointer}.locale-fields select:focus-visible{outline:2px solid #93939d;outline-offset:3px}
+.locale-fields select:focus-visible{outline:none!important;box-shadow:0 0 0 3px #93939d55!important}
