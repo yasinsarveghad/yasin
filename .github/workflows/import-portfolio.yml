@@ -1,4 +1,4 @@
-name: Import complete portfolio
+name: Update verified portfolio
 on:
   workflow_dispatch:
   push:
@@ -7,19 +7,18 @@ on:
 permissions:
   contents: write
 jobs:
-  import:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify and extract portfolio
+      - name: Apply and verify latest portfolio
         shell: python
         run: |
           import hashlib, io, json, pathlib, zipfile
           root = pathlib.Path.cwd()
-          parts = [root / f'portfolio-upload.part-{i:02}' for i in range(8)]
-          data = b''.join(p.read_bytes() for p in parts)
-          expected = 'd33a45d71c3fae8211b0d5e201f6826a9e11c479ac5083be2e3942f2e500e2c9'
-          assert hashlib.sha256(data).hexdigest() == expected, 'Transfer checksum mismatch'
+          payload = root / 'portfolio-update-15.zip'
+          data = payload.read_bytes()
+          assert hashlib.sha256(data).hexdigest() == '8d1e7d90daca45b49b2b6b68bc68a11964e550cd1489509f3274edd9d1039115'
           with zipfile.ZipFile(io.BytesIO(data)) as archive:
               for name in archive.namelist():
                   path = pathlib.PurePosixPath(name)
@@ -28,15 +27,12 @@ jobs:
           manifest = json.loads((root / 'FILE-MANIFEST.json').read_text())
           for name, digest in manifest.items():
               assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest, name
-          assert (root / 'concept-02/home.html').is_file()
-          assert (root / 'design-system/cloud-companions').is_dir()
-          for part in parts:
-              part.unlink()
-          print(f'Verified {len(manifest)} portfolio files')
-      - name: Commit verified site
+          payload.unlink()
+          print(f'Verified {len(manifest)} source and asset files')
+      - name: Commit verified update
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add --all
-          git commit -m 'Import complete Yasin portfolio, assets and animations'
+          git commit -m 'Restore authored Home components and unify monochrome button motion'
           git push
