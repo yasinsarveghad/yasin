@@ -56,7 +56,6 @@
 #product [data-framer-name^="Card"],.concept-mode-art{background-color:#f1f1f4!important;background-image:none!important}
 /* Decorative gradients remain transparent instead of becoming opaque tiles. */
 #main [data-ui-glow]{background-color:transparent!important;background-image:radial-gradient(ellipse at center,rgba(147,147,157,.12),rgba(147,147,157,0) 70%)!important}
-#connected [data-framer-name="Glow Left"],#connected [data-framer-name="Glow Right"]{display:none!important;background:none!important}
 /* Responsive finishing pass: scale the closing composition from its own canvas. */
 #main section[data-framer-name="CTA"] [data-framer-name="Panel"]{container-type:inline-size;gap:32px!important;padding:clamp(40px,6vw,80px) 0!important}
 #main section[data-framer-name="CTA"] h2{font-size:clamp(36px,5.3vw,80px)!important;line-height:1.12!important;text-wrap:balance}

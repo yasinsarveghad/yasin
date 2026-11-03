@@ -1,0 +1,61 @@
+/* Shared monochrome actions. Navigation, filters and icon controls keep their own geometry. */
+:root{--action-ease:cubic-bezier(.23,1,.32,1);--action-duration:240ms}
+#main a.framer-COTOK,#main button[type="submit"],.contact-button{
+  --action-bg:#171719;--action-fg:#fff;--action-hover-bg:#fff;--action-hover-fg:#171719;
+  position:relative!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  flex:none!important;gap:14px!important;min-height:48px!important;height:48px!important;width:max-content;max-width:100%;
+  padding:0 24px!important;border:1px solid #171719!important;border-radius:999px!important;corner-shape:round!important;
+  background:var(--action-bg)!important;color:var(--action-fg)!important;box-shadow:none!important;overflow:hidden!important;
+  font-size:14px!important;font-weight:500;line-height:24px!important;isolation:isolate;cursor:pointer;touch-action:manipulation;
+  transition:color 180ms ease,transform 120ms var(--action-ease)!important;
+}
+#main a.framer-COTOK[data-framer-name^="Secondary"]{
+  --action-bg:#fff;--action-fg:#171719;--action-hover-bg:#171719;--action-hover-fg:#fff;
+  border-color:#d8d8dd!important;
+}
+#main a.framer-COTOK:before,#main button[type="submit"]:before,.contact-button:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
+  background:var(--action-hover-bg);transform:translateY(102%);transition:transform var(--action-duration) var(--action-ease);
+}
+#main a.framer-COTOK:after,#main button[type="submit"]:after{
+  content:"↗";display:block;position:relative;inset:auto;width:17px;height:24px;flex:0 0 17px;border:0!important;
+  color:inherit;font:400 20px/24px Arial,sans-serif;transition:transform var(--action-duration) var(--action-ease);
+}
+#main a.framer-COTOK :is([data-framer-name="Face"],[data-framer-name="Glow Ring"]){display:none!important}
+#main a.framer-COTOK [data-framer-name="Label Wrap"]{display:block!important;position:relative!important;flex:none!important;height:24px!important;min-height:24px!important;overflow:hidden!important}
+#main a.framer-COTOK [data-framer-name="Roll"]{
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:0!important;
+  position:relative!important;height:48px!important;overflow:visible!important;transform:translateY(0)!important;translate:none!important;
+  transition:transform var(--action-duration) var(--action-ease)!important;
+}
+#main a.framer-COTOK :is([data-framer-name="Label"],[data-framer-name="Label Hover"]){
+  display:block!important;position:relative!important;inset:auto!important;flex:0 0 24px!important;height:24px!important;min-height:24px!important;
+  transform:none!important;opacity:1!important;margin:0!important;color:inherit!important;
+}
+#main a.framer-COTOK p,#main button[type="submit"] p{font-size:14px!important;line-height:24px!important;margin:0!important;color:inherit!important;--framer-text-color:currentColor!important;--locale-color:currentColor!important;white-space:nowrap!important}
+#main a.framer-COTOK [data-fa-overlay]:after,#main button[type="submit"] [data-fa-overlay]:after{font-size:14px!important;line-height:24px!important;color:inherit!important;white-space:nowrap!important}
+#main a.framer-COTOK:focus-visible,#main button[type="submit"]:focus-visible,.contact-button:focus-visible{outline:2px solid #007aff!important;outline-offset:4px!important}
+#main a.framer-COTOK:active,#main button[type="submit"]:active,.contact-button:active{transform:scale(.98)!important}
+#main a.framer-COTOK [data-framer-name="Icon"]{display:none!important}
+html[lang="fa"] #main a.framer-COTOK [data-fa-overlay]:after,
+html[lang="fa"] #main button[type="submit"] [data-fa-overlay]:after{color:var(--action-fg)!important}
+html[data-theme="dark"] #main a.framer-COTOK,html[data-theme="dark"] #main button[type="submit"],body.dark .contact-button{
+  --action-bg:#fff;--action-fg:#171719;--action-hover-bg:#171719;--action-hover-fg:#fff;border-color:#fff!important;
+}
+html[data-theme="dark"] #main a.framer-COTOK[data-framer-name^="Secondary"]{
+  --action-bg:#171719;--action-fg:#fff;--action-hover-bg:#fff;--action-hover-fg:#171719;border-color:#5c5c65!important;
+}
+html[data-theme="dark"] #main a.framer-COTOK :is(p,[data-fa-overlay]:after){color:inherit!important;--locale-color:currentColor!important}
+@media(hover:hover) and (pointer:fine){
+  #main a.framer-COTOK:hover,#main button[type="submit"]:hover,.contact-button:hover{color:var(--action-hover-fg)!important;opacity:1!important}
+  #main a.framer-COTOK:hover:before,#main button[type="submit"]:hover:before,.contact-button:hover:before{transform:translateY(0)}
+  #main a.framer-COTOK:hover:after,#main button[type="submit"]:hover:after{transform:translate(2px,-2px)}
+  #main a.framer-COTOK:hover [data-framer-name="Roll"]{transform:translateY(-24px)!important}
+  html[lang="fa"] #main a.framer-COTOK:hover [data-fa-overlay]:after,
+  html[lang="fa"] #main button[type="submit"]:hover [data-fa-overlay]:after{color:var(--action-hover-fg)!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #main a.framer-COTOK,#main button[type="submit"],.contact-button,
+  #main a.framer-COTOK:before,#main a.framer-COTOK:after,#main button[type="submit"]:before,#main button[type="submit"]:after,.contact-button:before,
+  #main a.framer-COTOK [data-framer-name="Roll"]{transition:none!important}
+}

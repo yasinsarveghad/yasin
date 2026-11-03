@@ -1,0 +1,24 @@
+/* Preserve the reference's light, transparent colour fields. */
+#main section[data-framer-name="Connected"] [data-framer-name="Glow Left"]{
+  display:block!important;background-color:transparent!important;
+  background-image:radial-gradient(50% 50% at 50% 50%,rgba(191,250,186,.55) 0%,rgba(191,250,186,0) 70%)!important;
+  pointer-events:none!important;
+}
+#main section[data-framer-name="Connected"] [data-framer-name="Glow Right"]{
+  display:block!important;background-color:transparent!important;
+  background-image:radial-gradient(50% 50% at 50% 50%,rgba(252,226,204,.85) 0%,rgba(252,226,204,0) 70%)!important;
+  pointer-events:none!important;
+}
+html[data-theme="dark"] #main section[data-framer-name="Connected"] [data-framer-name="Glow Left"],
+html[data-theme="dark"] #main section[data-framer-name="Connected"] [data-framer-name="Glow Right"]{opacity:.32}
+/* The original carousel owns its transforms and depth; no competing transition. */
+#main #team [data-framer-name^="Card "]{transition:none}
+/* Keep source code and numeric pagination in their reading direction inside RTL. */
+html[lang="fa"] #main section[data-framer-name="Create Modes"] [data-framer-name="Editor"] [data-framer-name="Code"],
+html[lang="fa"] #main section[data-framer-name="Create Modes"] [data-framer-name="Editor"] [data-framer-name="Code"] *,
+html[lang="fa"] #main section[data-framer-name="Create Modes"] [data-framer-name="File Tab"],
+html[lang="fa"] #main #team [data-framer-name="Counter"]{direction:ltr!important;text-align:left!important;unicode-bidi:isolate}
+html[lang="fa"] #main section[data-framer-name="Create Modes"] [data-framer-name="Editor"] [data-framer-name="Code"] p{--framer-text-alignment:left!important}
+@media(prefers-reduced-motion:reduce){
+  #main section[data-framer-name="Connected"] [data-framer-name^="Tile "] [data-framer-name="Image"]{transform:none!important}
+}
